@@ -187,25 +187,6 @@
             margin: 0;
         }
 
-        [data-theme="dark"] .paper-award {
-            color: #fcd34d;
-        }
-
-        [data-theme="dark"] .status-review {
-            background: rgba(252, 231, 243, 0.15);
-            color: #f9a8d4;
-        }
-
-        [data-theme="dark"] .status-working {
-            background: rgba(0, 155, 219, 0.15);
-            color: var(--cbs-blue-20);
-        }
-
-        [data-theme="dark"] .status-published {
-            background: rgba(209, 250, 229, 0.15);
-            color: #6ee7b7;
-        }
-
         @media (max-width: 768px) {
             .paper-row {
                 grid-template-columns: 1fr;
@@ -240,12 +221,6 @@
                     <li class="nav-item"><a class="nav-link active" href="research.html">Research</a></li>
                     <li class="nav-item"><a class="nav-link" href="politics-at-work.html">Politics at Work</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item">
-                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                        </button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -413,13 +388,6 @@
             }
         }
 
-        // Dark mode
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        const getPreferredTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        const setTheme = (theme) => { html.setAttribute('data-theme', theme); localStorage.setItem('theme', theme); };
-        setTheme(getPreferredTheme());
-        themeToggle.addEventListener('click', () => setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
     </script>
 </body>
 </html>
