@@ -237,17 +237,14 @@ a:hover {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 4rem;
     align-items: start;
 }
 
 .hero-image img {
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
     border-radius: 8px;
-    filter: grayscale(5%);
 }
 
 .hero-headline {
