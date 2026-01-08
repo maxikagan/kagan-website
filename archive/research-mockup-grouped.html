@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Mockup: Grouped Sections | Max Kagan</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <!-- Base styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .mockup-label {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #e67e22;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1000;
+            font-family: var(--font-sans);
+        }
+
+        .research-page {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Section styles */
+        .research-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .section-count {
+            background: var(--bg-alt);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .section-bar {
+            width: 4px;
+            height: 24px;
+            border-radius: 2px;
+        }
+
+        .section-bar--review { background: #ec4899; }
+        .section-bar--working { background: var(--cbs-blue); }
+        .section-bar--published { background: #10b981; }
+
+        /* Paper cards in grid */
+        .paper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .paper-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .paper-card:hover {
+            border-color: var(--primary-accent);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .paper-journal {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--primary-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.35;
+            margin-bottom: 0.35rem;
+            color: var(--text-main);
+        }
+
+        .paper-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .paper-title a:hover {
+            color: var(--primary-accent);
+        }
+
+        .paper-authors {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-awards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-award {
+            font-size: 0.7rem;
+            color: #b45309;
+            background: #fef3c7;
+            padding: 3px 8px;
+            border-radius: 3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .paper-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 0.75rem;
+        }
+
+        .paper-link {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary-accent);
+        }
+
+        .paper-abstract-toggle {
+            background: none;
+            border: none;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .paper-abstract-toggle:hover {
+            color: var(--primary-accent);
+        }
+
+        .paper-abstract-toggle i {
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+
+        .paper-abstract-toggle.is-open i {
+            transform: rotate(180deg);
+        }
+
+        .paper-abstract {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: var(--bg-alt);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .paper-abstract p {
+            margin: 0;
+        }
+
+        .paper-status {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+        }
+
+        [data-theme="dark"] .paper-award {
+            background: rgba(254, 243, 199, 0.15);
+            color: #fcd34d;
+        }
+
+        @media (max-width: 768px) {
+            .paper-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mockup-label">MOCKUP: Grouped Sections</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Max Kagan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigationbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigationbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="politics-at-work.html">Politics at Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="research-page">
+        <div class="container">
+            <h1 class="page-title">Research</h1>
+
+            <!-- Under Review -->
+            <section class="research-section">
+                <div class="section-header">
+                    <div class="section-bar section-bar--review"></div>
+                    <h2 class="section-title">Under Review</h2>
+                    <span class="section-count">3</span>
+                </div>
+                <div class="paper-grid">
+                    <article class="paper-card">
+                        <p class="paper-journal">Organization Science (Minor Revision)</p>
+                        <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795">VRscores: A Voter Registration-Based Approach for Measuring Workforce Politics</a></h3>
+                        <p class="paper-authors">Hurst, W. R., Kagan, M., & Frake, J.</p>
+                        <div class="paper-links">
+                            <a class="paper-link" href="https://vrscores.org" target="_blank">Website</a>
+                            <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795" target="_blank">SSRN</a>
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>This paper introduces VRscores, a workplace-level measure of employee partisanship constructed by linking U.S. voter registrations to electronically available profiles of workers covering 2012 to 2024. The organizational-level dataset measures the partisanship of 24.5 million workers across more than 534,000 employers with at least five employees in our data. We release this employer-level dataset as well as additional datasets that report VRscores at the firm, occupation, industry, and MSA levels. We show that our data cover substantially more employees and organizations than donation-based approaches to measuring political ideology. We also show that VRscores are more representative of employees in terms of partisanship, seniority, occupation, and industry. VRscores and donation-based measures are only moderately correlated (r = 0.51) and differ in their dichotomous classification (Democratic vs. Republican) of a given workplace for one in five companies.</p>
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <p class="paper-journal">Nature Human Behaviour (Revise & Resubmit)</p>
+                        <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165">Political Segregation in the U.S. Workplace</a></h3>
+                        <p class="paper-authors">Kagan, M., Frake, J., & Hurst, W. R.</p>
+                        <div class="paper-awards">
+                            <span class="paper-award"><i class="fas fa-trophy"></i> 2025 Dorothy Day Award for Outstanding Labor Research (APSA)</span>
+                        </div>
+                        <div class="paper-links">
+                            <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" target="_blank">SSRN</a>
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>Using a novel dataset created by matching employment histories with voter registration data for 45.3 million workers, we provide the first large-scale estimate of workplace political segregation in the United States. We present four main findings. First, partisans are strongly segregated by workplace. The average Democrat's coworkers are 11.7 percentage points more Democratic than the average Republican's; the magnitude of workplace political segregation is similar to segregation by gender. There is considerable geographic variation in the extent to which individuals experience greater political segregation at work or in the neighborhoods where they live. Even after controlling for sorting by geography, industry, and occupation, substantial political segregation remains. Second, segregation is largest among those who are politically active and those who plausibly enjoy greater market power. Third, Republicans experience significantly higher exposure to Democrats at work than vice versa, with the median Republican working in an environment where 50% of their coworkers are Democrats, compared to 32% of Republican co-workers for the median Democrat. Fourth, political workplace segregation has increased only modestly since 2012.</p>
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <p class="paper-journal">Administrative Science Quarterly (Revise & Resubmit)</p>
+                        <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023">Organizational Civic Culture: Workplaces as Engines of Democratic Participation</a></h3>
+                        <p class="paper-authors">Hurst, W. R., Kagan, M., Lee, M., & Frake, J.</p>
+                        <div class="paper-links">
+                            <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023" target="_blank">SSRN</a>
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>Organizational cultures shape not only workplace outcomes but also civic life. While prior work has largely conceptualized civic culture within geographic units (e.g., country, state, or city), we introduce and evaluate the concept of organizational civic culture—the norms and values within organizations of participation in democratic institutions beyond the workplace. Leveraging a novel dataset containing employment histories and voter turnout records for 28 million Americans, along with a quasi-experimental mover design, we find plausibly causal evidence that coworker voter turnout increases a focal worker's turnout. The influence of organizational civic culture is especially pronounced in low-turnout elections, among workers who are less civically engaged, among college-educated workers, and in instances where more coworkers share a focal worker's partisanship. In supplementary analysis, we show that these effects spill into workers' households, suggesting that civic habits acquired at work diffuse to other corners of social life. Overall, our findings identify organizations and employment as previously overlooked but important scaffolds to democratic institutions.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Working Papers -->
+            <section class="research-section">
+                <div class="section-header">
+                    <div class="section-bar section-bar--working"></div>
+                    <h2 class="section-title">Working Papers</h2>
+                    <span class="section-count">3</span>
+                </div>
+                <div class="paper-grid">
+                    <article class="paper-card">
+                        <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794">Business on the Ballot: Employee Voting as Nonmarket Strategy</a></h3>
+                        <p class="paper-authors">Kagan, M.</p>
+                        <div class="paper-links">
+                            <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794" target="_blank">SSRN</a>
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>Can employees help firms complete in the nonmarket arena? Research on nonmarket strategy has recognized constituency building as a form of corporate political activity (CPA), but there has been limited investigation into whether and how firms can rely upon employees to support their political goals. While employees would seem a promising target for constituency building, research suggests that employees often react negatively when firms communicate political messages, making it unclear if firms can or should rely upon employees to support CPA. I develop and test a theory that firms can rely on employees' political support when two conditions are met: first, that the policy issue is non-partisan, and second, that there are clear strategic implications for the firm and its employees. To test this theory, I look at an important but understudied political context: direct democracy via non-partisan ballot questions at the U.S. state and local level. Using an unprecedented dataset which links millions of U.S. workers with their election turnout records, I employ difference-indifferences and find that employees and members of their households turn out to vote at significantly higher rates versus unaffected voters in low-turnout elections featuring ballot questions with strategic implications for their employer (up to 33 p.p. for employees and up to 13 p.p. for household members). These findings present novel theoretical insights and empirical evidence about how firms can influence policy outcomes and speak to broader questions about firms' impact on society.</p>
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <h3 class="paper-title">Beyond Left and Right: New Evidence on Consumer Reactions to Corporate Sociopolitical Stance-Taking</h3>
+                        <p class="paper-authors">Kagan, M. & Burbano, V.</p>
+                        <div class="paper-awards">
+                            <span class="paper-award"><i class="fas fa-trophy"></i> AOM Annual Meeting Best Paper (2025)</span>
+                        </div>
+                        <div class="paper-links">
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>A growing body of research shows that corporate sociopolitical stance-taking can lead to polarized reactions from stakeholders. Thus far, research has focused on issues characterized by ideological (or partisan) divides. While these studies have emphasized the role of ideology in driving polarized stakeholder reactions, there is little evidence of whether similar patterns of polarization can emerge on issues which feature less clear ideological (or partisan) divides. We address this gap by studying consumer reactions to real-world corporate responses to a set of issues which include the Israel-Palestine conflict. While Israel-Palestine is a highly charged issue that divides Americans, divisions do not fall along clearly partisan or ideological lines. We use an incentive-compatible survey experiment which uses a naturalistic format to informs respondents about pro-Israel or pro-Palestinian stances taken by different parts of the McDonald's system (i.e., local franchises) before using an incentive-compatible mechanism to measure respondents' willingness-to-pay for a McDonald's gift card. We find that consumers consistently react negatively to stances they oppose regardless of whether the issues are aligned with ideological divisions (e.g., stances on Black Lives Matter, LGBT rights, and climate change) or issues are less directly aligned with a ideology or partisan camp (e.g., stances on Israel-Palestine). Consistent with prior work, we show that consumers penalize companies for taking misaligned stances, but do not reward them for taking aligned ones. We also demonstrate that these changes are almost entirely manifested as decreases along the extensive margin (i.e., boycotting) rather than along the intensive margin (i.e., continued consumption but reduced willingness-to-pay). Our findings suggest that polarized stakeholder reactions can occur across a range of issue areas and need not be solely attributable to ideological divides.</p>
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450">Corporate Political Stances and Employee Turnover</a></h3>
+                        <p class="paper-authors">White, J., Hurst, W. R., & Kagan, M.</p>
+                        <div class="paper-awards">
+                            <span class="paper-award"><i class="fas fa-trophy"></i> SMS Strategic Human Capital Interest Group Best Paper (2025)</span>
+                            <span class="paper-award"><i class="fas fa-award"></i> SMS Annual Conference Best Paper (Nominated, 2025)</span>
+                        </div>
+                        <div class="paper-links">
+                            <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450" target="_blank">SSRN</a>
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>We examine how corporate sociopolitical stance-taking affects employee turnover. While prior studies suggest asymmetrically negative reactions from stakeholders misaligned with corporate stances, they have tended to examine behaviors that incur little cost to stakeholders. We argue that when it comes to turnover, where expressing opposition by leaving one's job is exceptionally costly, positive (retention) effects will instead tend to outweigh negative (attrition) effects. We test this in the context of the North Carolina's 2016 "bathroom bill," which required transgender individuals to use a bathroom corresponding the sex on their birth certificate. We link millions of employment histories to voter files and use survey data to impute attitudes on transgender issues. Using matched difference-in-differences, we estimate that companies publicly opposing the bill experienced reduced employee attrition, especially among employees who were more likely to agree with this stance. Further consistent with our proposed mechanism, these retention effects were larger among younger workers, for whom politically-motivated career decisions are less costly. We note that while stance-taking may improve employee retention, it may also contribute to political segregation across workplaces with potential downstream consequences for organizations and society.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Published -->
+            <section class="research-section">
+                <div class="section-header">
+                    <div class="section-bar section-bar--published"></div>
+                    <h2 class="section-title">Published</h2>
+                    <span class="section-count">1</span>
+                </div>
+                <div class="paper-grid">
+                    <article class="paper-card">
+                        <p class="paper-journal">The Review of International Organizations (2022)</p>
+                        <h3 class="paper-title"><a href="https://link.springer.com/article/10.1007/s11558-022-09464-2">Trade Wars and Election Interference</a></h3>
+                        <p class="paper-authors">Brutger, R., Chaudoin, S., & Kagan, M.</p>
+                        <div class="paper-links">
+                            <a class="paper-link" href="https://link.springer.com/article/10.1007/s11558-022-09464-2" target="_blank">Journal (Open Access)</a>
+                            <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                        </div>
+                        <div class="paper-abstract" hidden>
+                            <p>In response to the Trump trade war, China, the EU, and other countries enacted politically-targeted trade retaliation (PTTR) against swing states and Republican strongholds in the United States. We argue that PTTR increases public concerns about foreign election interference and assess the effects of such retaliation across partisan affiliations. We test our predictions using a national survey experiment in the United States fielded before the 2020 election. In contrast to findings about sanctions and foreign endorsements, we find strong evidence that PTTR increases fears of election interference among both Republicans and Democrats. Partisan double standards in reaction to PTTR were strongest for retaliation targeting swing states and smaller for retaliation targeting the President's base. Overall, the evidence shows that economic policies which are not primarily intended to influence elections may nevertheless come to be viewed by the public as foreign election interference.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copyright">&copy; 2025 Max Kagan</p>
+                <div class="footer-links">
+                    <a href="#">Google Scholar</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Bluesky</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Abstract toggle
+        function toggleAbstract(btn) {
+            const article = btn.closest('.paper-card');
+            const abstract = article.querySelector('.paper-abstract');
+
+            if (abstract.hidden) {
+                abstract.hidden = false;
+                btn.classList.add('is-open');
+                btn.innerHTML = '<i class="fas fa-chevron-down"></i> Hide';
+            } else {
+                abstract.hidden = true;
+                btn.classList.remove('is-open');
+                btn.innerHTML = '<i class="fas fa-chevron-down"></i> Abstract';
+            }
+        }
+
+        // Dark mode
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const getPreferredTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const setTheme = (theme) => { html.setAttribute('data-theme', theme); localStorage.setItem('theme', theme); };
+        setTheme(getPreferredTheme());
+        themeToggle.addEventListener('click', () => setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Mockup: Large Typography + Journal-First | Max Kagan</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <!-- Base styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Mockup-specific overrides */
+        .mockup-label {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1000;
+            font-family: var(--font-sans);
+        }
+
+        .research-page {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+        }
+
+        .page-header {
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        /* Large Typography Paper Styles */
+        .paper-item {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .paper-item:first-child {
+            padding-top: 0;
+        }
+
+        .paper-item:last-child {
+            border-bottom: none;
+        }
+
+        .paper-journal {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary-accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .paper-status {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--bg-alt);
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-left: 1rem;
+            vertical-align: middle;
+        }
+
+        .paper-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .paper-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .paper-title a:hover {
+            color: var(--primary-accent);
+        }
+
+        .paper-authors {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .paper-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            max-width: 800px;
+            margin-bottom: 1rem;
+        }
+
+        .paper-awards {
+            margin-bottom: 1rem;
+        }
+
+        .paper-award {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.85rem;
+            color: #b45309;
+            margin-right: 1rem;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .paper-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary-accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .paper-link:hover {
+            text-decoration: underline;
+        }
+
+        .paper-abstract-toggle {
+            background: none;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .paper-abstract-toggle:hover {
+            color: var(--primary-accent);
+        }
+
+        .paper-abstract {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-alt);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .paper-abstract p {
+            margin: 0;
+        }
+
+        [data-theme="dark"] .paper-award {
+            color: #fcd34d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mockup-label">MOCKUP: Large Type + Journal-First</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Max Kagan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigationbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigationbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="politics-at-work.html">Politics at Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="research-page">
+        <div class="container">
+            <header class="page-header">
+                <h1 class="page-title">Research</h1>
+            </header>
+
+            <div class="paper-list">
+
+                <!-- Paper 1 -->
+                <article class="paper-item">
+                    <span class="paper-journal">Organization Science<span class="paper-status">Minor Revision</span></span>
+                    <h2 class="paper-title">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795">VRscores: A Voter Registration-Based Approach for Measuring Workforce Politics</a>
+                    </h2>
+                    <p class="paper-authors">Hurst, W. R., Kagan, M., & Frake, J.</p>
+                    <p class="paper-description">
+                        Introduces a new workplace-level measure of employee partisanship covering 24.5 million workers across 534,000+ employers.
+                    </p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://vrscores.org" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>This paper introduces VRscores, a workplace-level measure of employee partisanship constructed by linking U.S. voter registrations to electronically available profiles of workers covering 2012 to 2024. The organizational-level dataset measures the partisanship of 24.5 million workers across more than 534,000 employers with at least five employees in our data.</p>
+                    </div>
+                </article>
+
+                <!-- Paper 2 -->
+                <article class="paper-item">
+                    <span class="paper-journal">Nature Human Behaviour<span class="paper-status">Revise & Resubmit</span></span>
+                    <h2 class="paper-title">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165">Political Segregation in the U.S. Workplace</a>
+                    </h2>
+                    <p class="paper-authors">Kagan, M., Frake, J., & Hurst, W. R.</p>
+                    <p class="paper-description">
+                        Provides the first large-scale estimate of workplace political segregation, finding segregation comparable to gender segregation.
+                    </p>
+                    <div class="paper-awards">
+                        <span class="paper-award"><i class="fas fa-trophy"></i> 2025 Dorothy Day Award for Outstanding Labor Research (APSA)</span>
+                    </div>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>Using a novel dataset created by matching employment histories with voter registration data for 45.3 million workers, we provide the first large-scale estimate of workplace political segregation in the United States.</p>
+                    </div>
+                </article>
+
+                <!-- Paper 3 -->
+                <article class="paper-item">
+                    <span class="paper-journal">Administrative Science Quarterly<span class="paper-status">Revise & Resubmit</span></span>
+                    <h2 class="paper-title">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023">Organizational Civic Culture: Workplaces as Engines of Democratic Participation</a>
+                    </h2>
+                    <p class="paper-authors">Hurst, W. R., Kagan, M., Lee, M., & Frake, J.</p>
+                    <p class="paper-description">
+                        Shows that coworker voter turnout causally increases individual turnout, identifying workplaces as important scaffolds for democratic participation.
+                    </p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>Organizational cultures shape not only workplace outcomes but also civic life. We introduce and evaluate the concept of organizational civic culture—the norms and values within organizations of participation in democratic institutions beyond the workplace.</p>
+                    </div>
+                </article>
+
+                <!-- Paper 4 -->
+                <article class="paper-item">
+                    <span class="paper-journal">Working Paper</span>
+                    <h2 class="paper-title">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794">Business on the Ballot: Employee Voting as Nonmarket Strategy</a>
+                    </h2>
+                    <p class="paper-authors">Kagan, M.</p>
+                    <p class="paper-description">
+                        Examines how firms mobilize employees to vote in local elections affecting business interests, documenting ~20 percentage point treatment effects on turnout.
+                    </p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>Can employees help firms compete in the nonmarket arena? Research on nonmarket strategy has recognized constituency building as a form of corporate political activity (CPA), but there has been limited investigation into whether and how firms can rely upon employees to support their political goals.</p>
+                    </div>
+                </article>
+
+                <!-- Paper 5 -->
+                <article class="paper-item">
+                    <span class="paper-journal">Working Paper</span>
+                    <h2 class="paper-title">
+                        Beyond Left and Right: New Evidence on Consumer Reactions to Corporate Sociopolitical Stance-Taking
+                    </h2>
+                    <p class="paper-authors">Kagan, M. & Burbano, V.</p>
+                    <p class="paper-description">
+                        Provides new evidence on how consumers react to corporate political stances across the ideological spectrum.
+                    </p>
+                    <div class="paper-awards">
+                        <span class="paper-award"><i class="fas fa-trophy"></i> AOM Annual Meeting Best Paper (2025)</span>
+                    </div>
+                    <div class="paper-links">
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>A growing body of research shows that corporate sociopolitical stance-taking can lead to polarized reactions from stakeholders. Thus far, research has focused on issues characterized by ideological (or partisan) divides.</p>
+                    </div>
+                </article>
+
+                <!-- Paper 6 -->
+                <article class="paper-item">
+                    <span class="paper-journal">Working Paper</span>
+                    <h2 class="paper-title">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450">Corporate Political Stances and Employee Turnover</a>
+                    </h2>
+                    <p class="paper-authors">White, J., Hurst, W. R., & Kagan, M.</p>
+                    <p class="paper-description">
+                        Examines the relationship between corporate political positioning and employee retention decisions.
+                    </p>
+                    <div class="paper-awards">
+                        <span class="paper-award"><i class="fas fa-award"></i> SMS Annual Conference Best Paper (Nominated, 2025)</span>
+                        <span class="paper-award"><i class="fas fa-award"></i> SMS Strategic Human Capital Interest Group Best Paper (Nominated, 2025)</span>
+                    </div>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>We examine how corporate sociopolitical stance-taking affects employee turnover. While prior studies suggest asymmetrically negative reactions from stakeholders misaligned with corporate stances, they have tended to examine behaviors that incur little cost to stakeholders.</p>
+                    </div>
+                </article>
+
+                <!-- Paper 7 -->
+                <article class="paper-item">
+                    <span class="paper-journal">The Review of International Organizations (2022)</span>
+                    <h2 class="paper-title">
+                        <a href="https://link.springer.com/article/10.1007/s11558-022-09464-2">Trade Wars and Election Interference</a>
+                    </h2>
+                    <p class="paper-authors">Brutger, R., Chaudoin, S., & Kagan, M.</p>
+                    <p class="paper-description">
+                        Examines how politically-targeted trade retaliation affects public perceptions of foreign election interference.
+                    </p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://link.springer.com/article/10.1007/s11558-022-09464-2" target="_blank"><i class="fas fa-external-link-alt"></i> Journal (Open Access)</a>
+                        <button class="paper-abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-chevron-down"></i> Abstract</button>
+                    </div>
+                    <div class="paper-abstract" hidden>
+                        <p>In response to the Trump trade war, China, the EU, and other countries enacted politically-targeted trade retaliation (PTTR) against swing states and Republican strongholds in the United States.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copyright">&copy; 2025 Max Kagan</p>
+                <div class="footer-links">
+                    <a href="https://scholar.google.com/citations?user=D7XsKOkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <a href="https://twitter.com/max_kagan" target="_blank">Twitter</a>
+                    <a href="https://bsky.app/profile/maxkagan.bsky.social" target="_blank">Bluesky</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleAbstract(btn) {
+            const article = btn.closest('.paper-item');
+            const abstract = article.querySelector('.paper-abstract');
+            const icon = btn.querySelector('i');
+
+            if (abstract.hidden) {
+                abstract.hidden = false;
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                btn.innerHTML = '<i class="fas fa-chevron-up"></i> Hide abstract';
+            } else {
+                abstract.hidden = true;
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                btn.innerHTML = '<i class="fas fa-chevron-down"></i> Abstract';
+            }
+        }
+
+        // Dark mode
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const getPreferredTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const setTheme = (theme) => { html.setAttribute('data-theme', theme); localStorage.setItem('theme', theme); };
+        setTheme(getPreferredTheme());
+        themeToggle.addEventListener('click', () => setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+    </script>
+</body>
+</html>
