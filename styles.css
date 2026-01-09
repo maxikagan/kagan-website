@@ -748,6 +748,30 @@ footer {
         justify-content: center;
     }
 
+    .pipeline-section {
+        padding: 1.25rem 1rem;
+    }
+
+    .pipeline-dots {
+        gap: 0.75rem;
+    }
+
+    .stage-dots i {
+        font-size: 1.25rem;
+    }
+
+    .stage-dots {
+        gap: 0.25rem;
+    }
+
+    .pipeline-arrow {
+        font-size: 1rem;
+    }
+
+    .stage-label {
+        font-size: 0.65rem;
+    }
+
     .project-hero {
         padding: 2rem;
     }
