@@ -45,14 +45,17 @@ python -m http.server 8000
 - CSS variables defined in `:root` for colors, fonts, spacing
 - Columbia Business School color palette (`--primary-color: #011E41`)
 - Component classes: `.surface-card`, `.paper-card`, `.featured-card`
-- Responsive breakpoints at 768px and 992px
+- Responsive breakpoints at 480px, 768px, and 992px
 
 ### Adding Research Papers
-In `research.html`, copy an existing `<article class="paper-card">` block and modify. Label classes:
-- `paper-label--jmp`: Job Market Paper (gold)
-- `paper-label--working`: Working Paper (purple)
-- `paper-label--review`: Under Review (pink)
-- `paper-label--published`: Published (green)
+In `research.html`, copy an existing `<article class="paper-row">` block and modify. Status classes:
+- `status-working`: Working Paper (gray)
+- `status-review`: Revise & Resubmit (purple)
+- `status-accepted`: Conditionally Accepted (amber)
+- `status-published`: Published (green)
+
+### Pipeline Visualization
+The publication pipeline in `research.html` shows paper icons at each stage. To add papers to "Conditionally Accepted", add `<i class="fas fa-file-alt"></i>` icons inside the `.stage-dots.accepted` div.
 
 ### Navigation
 Each page has identical navbar markup. When adding pages, update nav links in all HTML files.
