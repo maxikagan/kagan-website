@@ -291,7 +291,7 @@ a:hover {
 
 .paper-table-header {
     display: grid;
-    grid-template-columns: 1fr 180px 100px;
+    grid-template-columns: 1fr 160px 160px;
     gap: 1rem;
     padding: 1rem 1.5rem;
     background: var(--bg-body);
@@ -305,7 +305,7 @@ a:hover {
 
 .paper-row {
     display: grid;
-    grid-template-columns: 1fr 180px 100px;
+    grid-template-columns: 1fr 160px 160px;
     gap: 1rem;
     padding: 1.5rem;
     border-bottom: 1px solid var(--border);
@@ -822,4 +822,25 @@ footer {
     .pipeline-arrow {
         transform: rotate(90deg);
     }
+}
+
+.media-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0369a1;
+    background: #e0f2fe;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.media-badge:hover {
+    background: #bae6fd;
+}
+
+.media-badge i {
+    font-size: 0.7rem;
 }
