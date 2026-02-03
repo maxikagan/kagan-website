@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="editorial-body">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid nav-container">
             <a class="navbar-brand" href="index.html">Max Kagan</a>
@@ -30,69 +30,82 @@
         </div>
     </nav>
 
-    <main class="home-page">
+    <main class="home-page editorial-home">
         <div class="container-main">
-            <div class="home-grid">
-                <!-- Left: Photo -->
-                <div class="home-photo">
-                    <img src="images/headshot_transparent.png" alt="Max Kagan">
-                </div>
+            <div class="editorial-layout">
+                <aside class="editorial-rail">
+                    <div class="rail-card">
+                        <div class="rail-photo">
+                            <img src="images/headshot_transparent.png" alt="Max Kagan">
+                        </div>
+                        <h1 class="rail-name">Max Kagan</h1>
+                        <p class="rail-title">Postdoctoral Research Scholar in Management<br>Columbia Business School</p>
 
-                <!-- Right: Content -->
-                <div class="home-content">
-                    <h1 class="home-name">Max Kagan</h1>
-                    <p class="home-title">Postdoctoral Research Scholar in Management<br>Columbia Business School</p>
+                        <div class="rail-actions">
+                            <a class="btn btn-primary" href="research.html">Explore Research</a>
+                            <a class="btn btn-outline" href="cv.html">View CV</a>
+                        </div>
 
-                    <div class="home-bio">
-                        <p class="bio-lead"><strong>How do businesses navigate rising political polarization?</strong></p>
-
-                        <p>My research examines how the political beliefs and partisanship of employees, customers, and other stakeholders affect firm strategy and performance, and how firms, in turn, shape political outcomes. I use causal inference methods and large-scale administrative data, including a <a href="politics-at-work.html">novel dataset</a> linking voter registrations to tens of millions of U.S. workers.</p>
-
-                        <p>I contribute to research on non-market strategy, corporate political activity, and human capital, with a focus on partisan diversity in the workplace, employee responses to corporate political stances, and firm-driven political mobilization.</p>
-
-                        <p>My research is forthcoming in <em>Organization Science</em> and <em>Nature Human Behavior</em> and has been supported by organizations including the National Science Foundation.</p>
-
-                        <p>I received my Ph.D. in Political Science from the University of California, Berkeley. Prior to graduate school, I worked at McKinsey & Company in Dubai and New York, in private equity, and at the Good Jobs Institute.</p>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="mailto:mik2124@columbia.edu" class="social-link" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=D7XsKOkAAAAJ&hl=en" class="social-link" title="Google Scholar" target="_blank">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="https://twitter.com/max_kagan" class="social-link" title="Twitter/X" target="_blank">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                        <a href="https://bsky.app/profile/maxkagan.bsky.social" class="social-link" title="Bluesky" target="_blank">
-                            <svg viewBox="0 0 568 501" fill="currentColor"><path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.217C285.185 377.326 284.012 374.171 284 374.357C283.988 374.171 282.815 377.326 280.369 383.217C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/maxkagan/" class="social-link" title="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/maxikagan" class="social-link" title="GitHub" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-
-                    <!-- Featured Research -->
-                    <div class="featured-section">
-                        <h2 class="featured-section-title">Featured Research</h2>
-                        <div class="featured-cards">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" class="featured-card" target="_blank">
-                                <div class="featured-card-journal">Nature Human Behaviour</div>
-                                <div class="featured-card-title">Political Segregation in the U.S. Workplace</div>
-                                <span class="featured-card-status status-accepted">Conditionally Accepted</span>
+                        <div class="rail-section">
+                            <p class="rail-section-title">Elsewhere</p>
+                            <a href="https://scholar.google.com/citations?user=D7XsKOkAAAAJ&hl=en" class="rail-link" target="_blank" rel="noopener" aria-label="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
                             </a>
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795" class="featured-card" target="_blank">
-                                <div class="featured-card-journal">Organization Science</div>
-                                <div class="featured-card-title">VRscores: Measuring Workforce Politics</div>
-                                <span class="featured-card-status status-accepted">Conditionally Accepted</span>
+                            <a href="https://twitter.com/max_kagan" class="rail-link" target="_blank" rel="noopener" aria-label="X">
+                                <i class="fab fa-x-twitter"></i> X (Twitter)
+                            </a>
+                            <a href="https://bsky.app/profile/maxkagan.bsky.social" class="rail-link" target="_blank" rel="noopener" aria-label="Bluesky">
+                                <svg viewBox="0 0 568 501" fill="currentColor" class="bluesky-icon" aria-hidden="true"><path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.217C285.185 377.326 284.012 374.171 284 374.357C283.988 374.171 282.815 377.326 280.369 383.217C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"/></svg> Bluesky
+                            </a>
+                            <a href="https://www.linkedin.com/in/maxkagan/" class="rail-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/maxikagan" class="rail-link" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
-                </div>
+                </aside>
+
+                <section class="editorial-story">
+                    <p class="story-kicker">Research Focus</p>
+                    <h2 class="story-title">How do businesses navigate rising political polarization?</h2>
+
+                    <div class="story-body">
+                        <p>My research examines how the political beliefs and partisanship of employees, customers, and other stakeholders shape firm strategy and performance, and how firms, in turn, shape political outcomes. I use causal inference methods and large-scale administrative data, including a <a href="politics-at-work.html">novel dataset</a> linking voter registrations to tens of millions of U.S. workers.</p>
+                        <p>My research is forthcoming in <em>Organization Science</em> and <em>Nature Human Behavior</em> and has been supported by organizations including the National Science Foundation.</p>
+                        <p>I received my Ph.D. in Political Science from the University of California, Berkeley. Prior to graduate school, I worked at McKinsey & Company in Dubai and New York, in private equity, and at the Good Jobs Institute.</p>
+                    </div>
+
+                    <div class="story-callout">
+                        <p class="callout-title">Politics at Work</p>
+                        <p>Explore the dataset and project materials for the political polarization and workplace research stream.</p>
+                        <a href="politics-at-work.html" class="callout-link">Explore the project</a>
+                    </div>
+
+                    <div class="topic-tags">
+                        <span class="topic-tag">Non-market Strategy</span>
+                        <span class="topic-tag">Corporate Political Activity</span>
+                        <span class="topic-tag">Human Capital</span>
+                        <span class="topic-tag">Partisan Diversity</span>
+                        <span class="topic-tag">Political Mobilization</span>
+                    </div>
+
+                    <div class="feature-grid">
+                        <article class="feature-card">
+                            <p class="feature-label">Forthcoming</p>
+                            <h3 class="feature-title">Organization Science</h3>
+                            <p class="feature-text">Research on partisan diversity in the workplace and employee responses to corporate political stances.</p>
+                            <a href="research.html" class="feature-link">View research</a>
+                        </article>
+                        <article class="feature-card">
+                            <p class="feature-label">Forthcoming</p>
+                            <h3 class="feature-title">Nature Human Behavior</h3>
+                            <p class="feature-text">Firm-driven political mobilization and how organizations shape political outcomes.</p>
+                            <a href="research.html" class="feature-link">View research</a>
+                        </article>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
