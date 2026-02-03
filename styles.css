@@ -525,7 +525,7 @@ a:hover {
 }
 
 .paper-abstract.show {
-    max-height: 600px;
+    max-height: 2000px;
     opacity: 1;
     padding: 1rem 1.25rem;
     margin-top: 1rem;
