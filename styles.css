@@ -1246,6 +1246,18 @@ body.editorial-body {
     margin-bottom: 1.1rem;
 }
 
+.story-body a {
+    color: #1a5a8a;
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 90, 138, 0.3);
+    text-underline-offset: 2px;
+}
+
+.story-body a:hover {
+    color: var(--navy);
+    text-decoration-color: var(--navy);
+}
+
 .story-callout {
     background: #f7f8fb;
     border-radius: 12px;
