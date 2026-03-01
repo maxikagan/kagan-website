@@ -19,7 +19,7 @@ Static academic personal website for Max Kagan (maxkagan.com), hosted on GitHub 
 index.html              # Home page with bio and social links
 research.html           # Research papers with abstract toggles
 politics-at-work.html   # Featured project page (VRscores dataset)
-cv.html                 # PDF viewer for CV
+cv.html                 # CV page with download/open buttons
 styles.css              # All custom styles (CSS variables, components)
 images/
   └── headshot.jpg      # Profile photo
