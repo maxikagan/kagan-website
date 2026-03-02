@@ -1385,3 +1385,68 @@ body.editorial-body {
         padding: 1.25rem;
     }
 }
+
+/* ================================================
+   Pill Accordion (research paper sections)
+   ================================================ */
+
+.pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.pill-toggle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-body);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    padding: 0.3rem 0.75rem;
+    transition: all 0.15s;
+}
+
+.pill-toggle:hover {
+    border-color: var(--navy-light);
+    color: var(--navy-light);
+}
+
+.pill-toggle.active {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+.pill-panel {
+    display: none;
+    padding: 1rem 1.25rem;
+    margin-top: 0.75rem;
+    background: var(--bg-body);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    animation: pillFadeIn 0.2s ease;
+}
+
+.pill-panel.active {
+    display: block;
+}
+
+@keyframes pillFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.pill-panel a {
+    color: var(--navy-light);
+}
+
+.pill-panel .award-badge,
+.pill-panel .media-badge {
+    margin-right: 0.35rem;
+    margin-bottom: 0.35rem;
+}
