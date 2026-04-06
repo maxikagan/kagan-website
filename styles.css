@@ -258,8 +258,8 @@ a:hover {
 }
 
 .featured-card-status.status-accepted {
-    color: #115e59;
-    background: #ccfbf1;
+    color: #166534;
+    background: #dcfce7;
 }
 
 .featured-card-status.status-published {
@@ -457,8 +457,8 @@ a:hover {
 }
 
 .status-badge.status-accepted {
-    color: #115e59;
-    background: #ccfbf1;
+    color: #166534;
+    background: #dcfce7;
 }
 
 .status-badge.status-published {
@@ -589,7 +589,7 @@ a:hover {
 
 .paper-status.status-working { color: var(--text-muted); }
 .paper-status.status-review { color: var(--accent-purple); }
-.paper-status.status-accepted { color: #0d9488; }
+.paper-status.status-accepted { color: var(--accent-green); }
 .paper-status.status-published { color: var(--accent-green); }
 
 /* ================================================
