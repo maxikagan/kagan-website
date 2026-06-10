@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,102 +38,62 @@
 
                     <!-- Published & Accepted -->
                     <section class="paper-section">
-                        <h2 class="section-label">Published & Accepted</h2>
+                        <h2 class="section-label">Published &amp; Accepted</h2>
 
                         <!-- VRscores -->
-                        <article class="paper-card" data-card="vrscores">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">
-                                        <a href="https://doi.org/10.1287/orsc.2025.20402" target="_blank">VRscores: A Voter Registration-Based Approach for Measuring Workforce Politics</a>
-                                    </h3>
-                                    <p class="paper-journal">Organization Science</p>
-                                    <p class="paper-authors">Max Kagan, Justin Frake, & Reuben Hurst</p>
+                        <article class="ref-entry" data-card="vrscores">
+                            <div class="ref-side">
+                                <div class="ref-year">2026</div>
+                            </div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://doi.org/10.1287/orsc.2025.20402" target="_blank">VRscores: A Voter Registration-Based Approach for Measuring Workforce Politics</a></h3>
+                                <p class="ref-meta">Max Kagan, Justin Frake &amp; Reuben Hurst &middot; <em>Organization Science</em></p>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'vrscores', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://doi.org/10.1287/orsc.2025.20402" target="_blank"><i class="fas fa-book"></i> Publisher</a>
+                                    <a class="ref-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-published">Published</span>
-                                </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'vrscores', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'vrscores', 'links')">Full Paper</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'vrscores', 'press')">Press Coverage</button>
-                            </div>
-                            <div class="pill-panel" data-pill="vrscores-abstract">
-                                This paper introduces VRscores, a workplace-level measure of employee partisanship constructed by linking U.S. voter registrations to electronically available profiles of workers covering 2012 to 2024. The organizational-level dataset measures the partisanship of 24.5 million workers across more than 534,000 employers with at least five employees in our data. We release this employer-level dataset as well as additional datasets that report VRscores at the firm, occupation, industry, and MSA levels. We show that our data cover substantially more employees and organizations than donation-based approaches to measuring political ideology. We also show that VRscores are more representative of employees in terms of partisanship, seniority, occupation, and industry. VRscores and donation-based measures are only moderately correlated (r = 0.51) and differ in their dichotomous classification (Democratic vs. Republican) of a given workplace for one in five companies.
-                            </div>
-                            <div class="pill-panel" data-pill="vrscores-press">
-                                <a class="media-badge" href="https://democracy.umich.edu/what-our-workplaces-reveal-about-political-division/" target="_blank"><i class="fas fa-newspaper"></i> UMich Year of Democracy</a>
-                            </div>
-                            <div class="pill-panel" data-pill="vrscores-links">
-                                <div class="paper-links">
-                                    <a class="paper-link" href="https://doi.org/10.1287/orsc.2025.20402" target="_blank"><i class="fas fa-book"></i> Publisher</a>
-                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104795" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                                <div class="ref-panel" data-ref="vrscores-abstract">
+                                    This paper introduces VRscores, a workplace-level measure of employee partisanship constructed by linking U.S. voter registrations to electronically available profiles of workers covering 2012 to 2024. The organizational-level dataset measures the partisanship of 24.5 million workers across more than 534,000 employers with at least five employees in our data. We release this employer-level dataset as well as additional datasets that report VRscores at the firm, occupation, industry, and MSA levels. We show that our data cover substantially more employees and organizations than donation-based approaches to measuring political ideology. We also show that VRscores are more representative of employees in terms of partisanship, seniority, occupation, and industry. VRscores and donation-based measures are only moderately correlated (r = 0.51) and differ in their dichotomous classification (Democratic vs. Republican) of a given workplace for one in five companies.
                                 </div>
                             </div>
                         </article>
 
                         <!-- Political Segregation -->
-                        <article class="paper-card" data-card="polseg">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">
-                                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" target="_blank">Political Segregation in the U.S. Workplace</a>
-                                    </h3>
-                                    <p class="paper-journal">Nature Human Behaviour</p>
-                                    <p class="paper-authors">Justin Frake, Reuben Hurst, & Max Kagan</p>
+                        <article class="ref-entry" data-card="polseg">
+                            <div class="ref-side">
+                                <div class="ref-year">Forthcoming</div>
+                            </div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" target="_blank">Political Segregation in the U.S. Workplace</a></h3>
+                                <p class="ref-meta">Justin Frake, Reuben Hurst &amp; Max Kagan &middot; <em>Nature Human Behaviour</em></p>
+                                <div class="ref-awards">
+                                    <span class="award-badge"><i class="fas fa-trophy"></i> 2025 Dorothy Day Award for Outstanding Labor Research (APSA)</span>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-accepted">Accepted</span>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'polseg', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
                                 </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'polseg', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'polseg', 'links')">Full Paper</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'polseg', 'press')">Press Coverage</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'polseg', 'awards')">Awards</button>
-                            </div>
-                            <div class="pill-panel" data-pill="polseg-abstract">
-                                We estimate the extent of workplace political segregation in the United States by merging data covering over 45 million workers. We present four main findings. First, partisans are segregated by workplace. The average Democrat's coworkers are 11.7 percentage points (95% CI: [10.5, 12.9]) more Democratic than the average Republican's. After controlling for geography, industry, and occupation, segregation is 2.9 p.p. [2.5, 3.3], comparable to analogously estimated gender segregation (2.8 p.p. [2.4, 3.2]). Second, segregation is largest among the politically active (donors: 14.8 p.p. [13.2, 16.4] vs. non-donors: 11.6 p.p. [10.0, 12.0]) and those with more market power (senior executives: 14.7 p.p. [13.3, 16.1]). Third, Republicans experience higher exposure to Democrats than vice versa: the median Republican's coworkers are 50% Democratic versus 32% Republican for the median Democrat. Fourth, political segregation has changed little over time (2012: 11.1 p.p. [9.9, 12.3] vs. 2024: 11.0 p.p. [10.0, 12.0]).
-                            </div>
-                            <div class="pill-panel" data-pill="polseg-awards">
-                                <span class="award-badge"><i class="fas fa-trophy"></i> 2025 Dorothy Day Award for Outstanding Labor Research (American Political Science Association)</span>
-                            </div>
-                            <div class="pill-panel" data-pill="polseg-press">
-                                <a class="media-badge" href="https://www.niskanencenter.org/the-politics-of-our-jobs/" target="_blank"><i class="fas fa-podcast"></i> Niskanen Center Science of Politics Podcast</a>
-                                <a class="media-badge" href="https://www.lib.berkeley.edu/about/news/voter-data" target="_blank"><i class="fas fa-newspaper"></i> UC Berkeley Library</a>
-                            </div>
-                            <div class="pill-panel" data-pill="polseg-links">
-                                <div class="paper-links">
-                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639165" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                                <div class="ref-panel" data-ref="polseg-abstract">
+                                    We estimate the extent of workplace political segregation in the United States by merging data covering over 45 million workers. We present four main findings. First, partisans are segregated by workplace. The average Democrat's coworkers are 11.7 percentage points (95% CI: [10.5, 12.9]) more Democratic than the average Republican's. After controlling for geography, industry, and occupation, segregation is 2.9 p.p. [2.5, 3.3], comparable to analogously estimated gender segregation (2.8 p.p. [2.4, 3.2]). Second, segregation is largest among the politically active (donors: 14.8 p.p. [13.2, 16.4] vs. non-donors: 11.6 p.p. [10.0, 12.0]) and those with more market power (senior executives: 14.7 p.p. [13.3, 16.1]). Third, Republicans experience higher exposure to Democrats than vice versa: the median Republican's coworkers are 50% Democratic versus 32% Republican for the median Democrat. Fourth, political segregation has changed little over time (2012: 11.1 p.p. [9.9, 12.3] vs. 2024: 11.0 p.p. [10.0, 12.0]).
                                 </div>
                             </div>
                         </article>
 
                         <!-- Trade Wars -->
-                        <article class="paper-card" data-card="tradewars">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">
-                                        <a href="https://link.springer.com/article/10.1007/s11558-022-09464-2" target="_blank">Trade Wars and Election Interference</a>
-                                    </h3>
-                                    <p class="paper-journal">Review of International Organizations</p>
-                                    <p class="paper-authors">Ryan Brutger, Stephen Chaudoin, & Max Kagan (2023)</p>
+                        <article class="ref-entry" data-card="tradewars">
+                            <div class="ref-side">
+                                <div class="ref-year">2023</div>
+                            </div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://link.springer.com/article/10.1007/s11558-022-09464-2" target="_blank">Trade Wars and Election Interference</a></h3>
+                                <p class="ref-meta">Ryan Brutger, Stephen Chaudoin &amp; Max Kagan &middot; <em>Review of International Organizations</em></p>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'tradewars', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://link.springer.com/article/10.1007/s11558-022-09464-2" target="_blank"><i class="fas fa-external-link-alt"></i> Journal (Open Access)</a>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-published">Published</span>
-                                </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'tradewars', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'tradewars', 'links')">Full Paper</button>
-                            </div>
-                            <div class="pill-panel" data-pill="tradewars-abstract">
-                                In response to the Trump trade war, China, the EU, and other countries enacted politically-targeted trade retaliation (PTTR) against swing states and Republican strongholds in the United States. We argue that PTTR increases public concerns about foreign election interference and assess the effects of such retaliation across partisan affiliations. We test our predictions using a national survey experiment in the United States fielded before the 2020 election. In contrast to findings about sanctions and foreign endorsements, we find strong evidence that PTTR increases fears of election interference among both Republicans and Democrats. Partisan double standards in reaction to PTTR were strongest for retaliation targeting swing states and smaller for retaliation targeting the President's base. Overall, the evidence shows that economic policies which are not primarily intended to influence elections may nevertheless come to be viewed by the public as foreign election interference.
-                            </div>
-                            <div class="pill-panel" data-pill="tradewars-links">
-                                <div class="paper-links">
-                                    <a class="paper-link" href="https://link.springer.com/article/10.1007/s11558-022-09464-2" target="_blank"><i class="fas fa-external-link-alt"></i> Journal (Open Access)</a>
+                                <div class="ref-panel" data-ref="tradewars-abstract">
+                                    In response to the Trump trade war, China, the EU, and other countries enacted politically-targeted trade retaliation (PTTR) against swing states and Republican strongholds in the United States. We argue that PTTR increases public concerns about foreign election interference and assess the effects of such retaliation across partisan affiliations. We test our predictions using a national survey experiment in the United States fielded before the 2020 election. In contrast to findings about sanctions and foreign endorsements, we find strong evidence that PTTR increases fears of election interference among both Republicans and Democrats. Partisan double standards in reaction to PTTR were strongest for retaliation targeting swing states and smaller for retaliation targeting the President's base. Overall, the evidence shows that economic policies which are not primarily intended to influence elections may nevertheless come to be viewed by the public as foreign election interference.
                                 </div>
                             </div>
                         </article>
@@ -144,66 +104,37 @@
                         <h2 class="section-label">Revise &amp; Resubmit</h2>
 
                         <!-- Organizational Civic Culture -->
-                        <article class="paper-card" data-card="civic">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">
-                                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023" target="_blank">Organizational Civic Culture: Workplaces as Engines of Democratic Participation</a>
-                                    </h3>
-                                    <p class="paper-journal">Administrative Science Quarterly</p>
-                                    <p class="paper-authors">Reuben Hurst, Max Kagan, Matthew Lee, & Justin Frake</p>
+                        <article class="ref-entry" data-card="civic">
+                            <div class="ref-side"></div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023" target="_blank">Organizational Civic Culture: Workplaces as Engines of Democratic Participation</a></h3>
+                                <p class="ref-meta">Reuben Hurst, Max Kagan, Matthew Lee &amp; Justin Frake &middot; <em>Administrative Science Quarterly</em></p>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'civic', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-review">Revise & Resubmit</span>
-                                </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'civic', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'civic', 'links')">Full Paper</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'civic', 'press')">Press Coverage</button>
-                            </div>
-                            <div class="pill-panel" data-pill="civic-abstract">
-                                Organizational cultures shape not only workplace outcomes but also civic life. While prior work has largely conceptualized civic culture within geographic units (e.g., country, state, or city), we introduce and evaluate the concept of organizational civic culture—the norms and values within organizations of participation in democratic institutions beyond the workplace. Leveraging a novel dataset containing employment histories and voter turnout records for 28 million Americans, along with a quasi-experimental mover design, we find plausibly causal evidence that coworker voter turnout increases a focal worker's turnout. The influence of organizational civic culture is especially pronounced in low-turnout elections, among workers who are less civically engaged, among college-educated workers, and in instances where more coworkers share a focal worker's partisanship. In supplementary analysis, we show that these effects spill into workers' households, suggesting that civic habits acquired at work diffuse to other corners of social life. Overall, our findings identify organizations and employment as previously overlooked but important scaffolds to democratic institutions.
-                            </div>
-                            <div class="pill-panel" data-pill="civic-press">
-                                <a class="media-badge" href="https://www.hbs.edu/bigs/can-companies-safely-participate-in-2026-midterm-elections" target="_blank"><i class="fas fa-newspaper"></i> Harvard Business School BiGS</a>
-                            </div>
-                            <div class="pill-panel" data-pill="civic-links">
-                                <div class="paper-links">
-                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357023" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                                <div class="ref-panel" data-ref="civic-abstract">
+                                    Organizational cultures shape not only workplace outcomes but also civic life. While prior work has largely conceptualized civic culture within geographic units (e.g., country, state, or city), we introduce and evaluate the concept of organizational civic culture&mdash;the norms and values within organizations of participation in democratic institutions beyond the workplace. Leveraging a novel dataset containing employment histories and voter turnout records for 28 million Americans, along with a quasi-experimental mover design, we find plausibly causal evidence that coworker voter turnout increases a focal worker's turnout. The influence of organizational civic culture is especially pronounced in low-turnout elections, among workers who are less civically engaged, among college-educated workers, and in instances where more coworkers share a focal worker's partisanship. In supplementary analysis, we show that these effects spill into workers' households, suggesting that civic habits acquired at work diffuse to other corners of social life. Overall, our findings identify organizations and employment as previously overlooked but important scaffolds to democratic institutions.
                                 </div>
                             </div>
                         </article>
 
                         <!-- Corporate Political Stances -->
-                        <article class="paper-card" data-card="cps">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">
-                                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450" target="_blank">Corporate Political Stances and Employee Turnover</a>
-                                    </h3>
-                                    <p class="paper-journal">Management Science</p>
-                                    <p class="paper-authors">James White, Reuben Hurst, & Max Kagan</p>
+                        <article class="ref-entry" data-card="cps">
+                            <div class="ref-side"></div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450" target="_blank">Corporate Political Stances and Employee Turnover</a></h3>
+                                <p class="ref-meta">James White, Reuben Hurst &amp; Max Kagan &middot; <em>Management Science</em></p>
+                                <div class="ref-awards">
+                                    <span class="award-badge"><i class="fas fa-trophy"></i> SMS Strategic Human Capital Best Paper (2025)</span>
+                                    <span class="award-badge"><i class="fas fa-award"></i> SMS Annual Conference Best Paper Nominee (2025)</span>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-review">Revise &amp; Resubmit</span>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'cps', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
                                 </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'cps', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'cps', 'links')">Full Paper</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'cps', 'awards')">Awards</button>
-                            </div>
-                            <div class="pill-panel" data-pill="cps-abstract">
-                                We examine how corporate sociopolitical stance-taking affects employee turnover. While prior studies suggest asymmetrically negative reactions from stakeholders who disagree with corporate stances, they have tended to examine low-cost behaviors. We argue that because leaving one's job is exceptionally costly, positive retention effects will instead outweigh negative attrition effects. We test this following North Carolina's 2016 "bathroom bill," which required transgender individuals to use bathrooms corresponding to the sex on their birth certificate. We link millions of employment histories to voter files, draw on survey data to impute attitudes on transgender issues, and estimate turnover effects using matched difference-in-differences. Companies publicly opposing the bill experienced increased retention in North Carolina. Consistent with our mechanism, retention effects were larger for employees who likely agreed with the stance and among young workers, for whom politically-motivated career decisions are less costly. While stance-taking may improve retention, it may also contribute to political segregation across workplaces with potential downstream consequences for organizations and society.
-                            </div>
-                            <div class="pill-panel" data-pill="cps-awards">
-                                <span class="award-badge"><i class="fas fa-trophy"></i> SMS Strategic Human Capital Interest Group Best Paper (2025)</span>
-                                <span class="award-badge"><i class="fas fa-award"></i> SMS Annual Conference Best Paper Nominee (2025)</span>
-                            </div>
-                            <div class="pill-panel" data-pill="cps-links">
-                                <div class="paper-links">
-                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104450" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                                <div class="ref-panel" data-ref="cps-abstract">
+                                    We examine how corporate sociopolitical stance-taking affects employee turnover. While prior studies suggest asymmetrically negative reactions from stakeholders who disagree with corporate stances, they have tended to examine low-cost behaviors. We argue that because leaving one's job is exceptionally costly, positive retention effects will instead outweigh negative attrition effects. We test this following North Carolina's 2016 "bathroom bill," which required transgender individuals to use bathrooms corresponding to the sex on their birth certificate. We link millions of employment histories to voter files, draw on survey data to impute attitudes on transgender issues, and estimate turnover effects using matched difference-in-differences. Companies publicly opposing the bill experienced increased retention in North Carolina. Consistent with our mechanism, retention effects were larger for employees who likely agreed with the stance and among young workers, for whom politically-motivated career decisions are less costly. While stance-taking may improve retention, it may also contribute to political segregation across workplaces with potential downstream consequences for organizations and society.
                                 </div>
                             </div>
                         </article>
@@ -213,53 +144,53 @@
                     <section class="paper-section">
                         <h2 class="section-label">Working Papers</h2>
 
+                        <!-- Where Americans Work / Employer Turnout Effects -->
+                        <article class="ref-entry" data-card="etes">
+                            <div class="ref-side"></div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6843538" target="_blank">Where Americans Work Shapes Whether They Vote: Evidence From 30 Million U.S. Workers</a></h3>
+                                <p class="ref-meta">Matthew Lee, Reuben Hurst, Max Kagan &amp; Justin Frake</p>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'etes', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6843538" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                                </div>
+                                <div class="ref-panel" data-ref="etes-abstract">
+                                    Where you work affects whether you vote. Using linked employment and voter records for 30 million U.S. workers across 377K employers, we estimate "Employer Turnout Effects" (ETEs)&mdash;organization-specific effects on voter turnout derived from a movers design that accounts for worker self-selection. ETEs have a bias-corrected interquartile range of 5.6 percentage points, comparable to the largest single-contact interventions in the voter mobilization literature. When workers change jobs, their turnout shifts in the direction predicted by the new employer's ETE, with asymmetric effects suggesting that turnout gains may persist after subsequent job changes. ETEs vary across industries (accommodation and food service show the lowest; white-collar sectors the highest), though within-industry variation far exceeds between-industry differences. Companies that publicly commit to providing time to vote have significantly higher ETEs. These findings identify the workplace as an overlooked but powerful lever for democratic participation.
+                                </div>
+                            </div>
+                        </article>
+
                         <!-- Business on the Ballot -->
-                        <article class="paper-card" data-card="ballot">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">
-                                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794" target="_blank">Business on the Ballot: Employee Voting as Nonmarket Strategy</a>
-                                    </h3>
-                                    <p class="paper-authors">Max Kagan</p>
+                        <article class="ref-entry" data-card="ballot">
+                            <div class="ref-side"></div>
+                            <div class="ref-main">
+                                <h3 class="ref-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794" target="_blank">Business on the Ballot: Employee Voting as Nonmarket Strategy</a></h3>
+                                <p class="ref-meta">Max Kagan</p>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'ballot', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a class="ref-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-working">Working Paper</span>
-                                </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'ballot', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'ballot', 'links')">Full Paper</button>
-                            </div>
-                            <div class="pill-panel" data-pill="ballot-abstract">
-                                Can employees help firms compete in the nonmarket arena? Research on nonmarket strategy has recognized constituency building as a form of corporate political activity (CPA), but there has been limited investigation into whether and how firms can rely upon employees to support their political goals. While employees would seem a promising target for constituency building, research suggests that employees often react negatively when firms communicate political messages, making it unclear if firms can or should rely upon employees to support CPA. I develop and test a theory that firms can rely on employees' political support when two conditions are met: first, that the policy issue is non-partisan, and second, that there are clear strategic implications for the firm and its employees. To test this theory, I look at an important but understudied political context: direct democracy via non-partisan ballot questions at the U.S. state and local level. Using an unprecedented dataset which links millions of U.S. workers with their election turnout records, I employ difference-in-differences and find that employees and members of their households turn out to vote at significantly higher rates versus unaffected voters in low-turnout elections featuring ballot questions with strategic implications for their employer (up to 33 p.p. for employees and up to 13 p.p. for household members). These findings present novel theoretical insights and empirical evidence about how firms can influence policy outcomes and speak to broader questions about firms' impact on society.
-                            </div>
-                            <div class="pill-panel" data-pill="ballot-links">
-                                <div class="paper-links">
-                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5404794" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+                                <div class="ref-panel" data-ref="ballot-abstract">
+                                    Can employees help firms compete in the nonmarket arena? Research on nonmarket strategy has recognized constituency building as a form of corporate political activity (CPA), but there has been limited investigation into whether and how firms can rely upon employees to support their political goals. While employees would seem a promising target for constituency building, research suggests that employees often react negatively when firms communicate political messages, making it unclear if firms can or should rely upon employees to support CPA. I develop and test a theory that firms can rely on employees' political support when two conditions are met: first, that the policy issue is non-partisan, and second, that there are clear strategic implications for the firm and its employees. To test this theory, I look at an important but understudied political context: direct democracy via non-partisan ballot questions at the U.S. state and local level. Using an unprecedented dataset which links millions of U.S. workers with their election turnout records, I employ difference-in-differences and find that employees and members of their households turn out to vote at significantly higher rates versus unaffected voters in low-turnout elections featuring ballot questions with strategic implications for their employer (up to 33 p.p. for employees and up to 13 p.p. for household members). These findings present novel theoretical insights and empirical evidence about how firms can influence policy outcomes and speak to broader questions about firms' impact on society.
                                 </div>
                             </div>
                         </article>
 
                         <!-- Beyond Left and Right -->
-                        <article class="paper-card" data-card="beyond">
-                            <div class="paper-card-top">
-                                <div class="paper-card-info">
-                                    <h3 class="paper-title">Beyond Left and Right: New Evidence on Consumer Reactions to Corporate Sociopolitical Stance-Taking</h3>
-                                    <p class="paper-authors">Max Kagan & Vanessa Burbano</p>
+                        <article class="ref-entry" data-card="beyond">
+                            <div class="ref-side"></div>
+                            <div class="ref-main">
+                                <h3 class="ref-title">Beyond Left and Right: New Evidence on Consumer Reactions to Corporate Sociopolitical Stance-Taking</h3>
+                                <p class="ref-meta">Max Kagan &amp; Vanessa Burbano</p>
+                                <div class="ref-awards">
+                                    <span class="award-badge"><i class="fas fa-trophy"></i> AOM Annual Meeting Best Paper (2025)</span>
                                 </div>
-                                <div class="paper-card-meta">
-                                    <span class="status-badge status-working">Working Paper</span>
+                                <div class="ref-actions">
+                                    <button class="ref-toggle" onclick="toggleRef(this, 'beyond', 'abstract')"><i class="fas fa-align-left"></i> Abstract</button>
                                 </div>
-                            </div>
-                            <div class="pill-row">
-                                <button class="pill-toggle" onclick="togglePill(this, 'beyond', 'abstract')">Abstract</button>
-                                <button class="pill-toggle" onclick="togglePill(this, 'beyond', 'awards')">Awards</button>
-                            </div>
-                            <div class="pill-panel" data-pill="beyond-abstract">
-                                A growing body of research shows that corporate sociopolitical stance-taking can lead to polarized reactions from stakeholders. Thus far, research has focused on issues characterized by ideological (or partisan) divides. While these studies have emphasized the role of ideology in driving polarized stakeholder reactions, there is little evidence of whether similar patterns of polarization can emerge on issues which feature less clear ideological (or partisan) divides. We address this gap by studying consumer reactions to real-world corporate responses to a set of issues which include the Israel-Palestine conflict. While Israel-Palestine is a highly charged issue that divides Americans, divisions do not fall along clearly partisan or ideological lines. We use an incentive-compatible survey experiment which uses a naturalistic format to informs respondents about pro-Israel or pro-Palestinian stances taken by different parts of the McDonald's system (i.e., local franchises) before using an incentive-compatible mechanism to measure respondents' willingness-to-pay for a McDonald's gift card. We find that consumers consistently react negatively to stances they oppose regardless of whether the issues are aligned with ideological divisions (e.g., stances on Black Lives Matter, LGBT rights, and climate change) or issues are less directly aligned with a ideology or partisan camp (e.g., stances on Israel-Palestine). Consistent with prior work, we show that consumers penalize companies for taking misaligned stances, but do not reward them for taking aligned ones. We also demonstrate that these changes are almost entirely manifested as decreases along the extensive margin (i.e., boycotting) rather than along the intensive margin (i.e., continued consumption but reduced willingness-to-pay). Our findings suggest that polarized stakeholder reactions can occur across a range of issue areas and need not be solely attributable to ideological divides.
-                            </div>
-                            <div class="pill-panel" data-pill="beyond-awards">
-                                <span class="award-badge"><i class="fas fa-trophy"></i> AOM Annual Meeting Best Paper (2025)</span>
+                                <div class="ref-panel" data-ref="beyond-abstract">
+                                    A growing body of research shows that corporate sociopolitical stance-taking can lead to polarized reactions from stakeholders. Thus far, research has focused on issues characterized by ideological (or partisan) divides. While these studies have emphasized the role of ideology in driving polarized stakeholder reactions, there is little evidence of whether similar patterns of polarization can emerge on issues which feature less clear ideological (or partisan) divides. We address this gap by studying consumer reactions to real-world corporate responses to a set of issues which include the Israel-Palestine conflict. While Israel-Palestine is a highly charged issue that divides Americans, divisions do not fall along clearly partisan or ideological lines. We use an incentive-compatible survey experiment which uses a naturalistic format to inform respondents about pro-Israel or pro-Palestinian stances taken by different parts of the McDonald's system (i.e., local franchises) before using an incentive-compatible mechanism to measure respondents' willingness-to-pay for a McDonald's gift card. We find that consumers consistently react negatively to stances they oppose regardless of whether the issues are aligned with ideological divisions (e.g., stances on Black Lives Matter, LGBT rights, and climate change) or issues are less directly aligned with an ideology or partisan camp (e.g., stances on Israel-Palestine). Consistent with prior work, we show that consumers penalize companies for taking misaligned stances, but do not reward them for taking aligned ones. We also demonstrate that these changes are almost entirely manifested as decreases along the extensive margin (i.e., boycotting) rather than along the intensive margin (i.e., continued consumption but reduced willingness-to-pay). Our findings suggest that polarized stakeholder reactions can occur across a range of issue areas and need not be solely attributable to ideological divides.
+                                </div>
                             </div>
                         </article>
                     </section>
@@ -284,19 +215,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function togglePill(btn, cardId, panelName) {
-            var card = btn.closest('.paper-card');
+        function toggleRef(btn, cardId, panelName) {
+            var entry = btn.closest('.ref-entry');
             var wasActive = btn.classList.contains('active');
 
-            card.querySelectorAll('.pill-toggle').forEach(function(b) { b.classList.remove('active'); });
-            card.querySelectorAll('.pill-panel').forEach(function(p) { p.classList.remove('active'); });
+            entry.querySelectorAll('.ref-toggle').forEach(function(b) { b.classList.remove('active'); });
+            entry.querySelectorAll('.ref-panel').forEach(function(p) { p.classList.remove('active'); });
 
             if (!wasActive) {
                 btn.classList.add('active');
-                card.querySelector('[data-pill="' + cardId + '-' + panelName + '"]').classList.add('active');
+                entry.querySelector('[data-ref="' + cardId + '-' + panelName + '"]').classList.add('active');
             }
         }
-
     </script>
 </body>
 </html>
