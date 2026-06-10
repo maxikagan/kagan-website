@@ -75,6 +75,8 @@ a:hover {
     font-size: 1.15rem;
     color: #ffffff !important;
     padding: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .navbar-brand:hover {
@@ -89,6 +91,8 @@ a:hover {
     padding: 1rem 1rem !important;
     border-bottom: 2px solid transparent;
     transition: color 0.15s, border-color 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 .nav-link:hover {
