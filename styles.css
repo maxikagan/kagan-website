@@ -601,9 +601,6 @@ a:hover {
    ================================================ */
 
 .ref-entry {
-    display: grid;
-    grid-template-columns: 112px 1fr;
-    gap: 1.5rem;
     padding: 1.4rem 0;
     border-bottom: 1px solid var(--border);
 }
@@ -611,32 +608,6 @@ a:hover {
 .ref-entry:first-child {
     border-top: 1px solid var(--border);
 }
-
-.ref-side {
-    padding-top: 0.15rem;
-}
-
-.ref-year {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    margin-bottom: 0.4rem;
-}
-
-.ref-badge {
-    display: inline-block;
-    font-size: 0.62rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 3px 8px;
-    border-radius: 4px;
-}
-
-.ref-badge.status-working { color: #475067; background: #eef1f6; }
-.ref-badge.status-review { color: #5b21b6; background: #ede9fe; }
-.ref-badge.status-accepted,
-.ref-badge.status-published { color: #166534; background: #dcfce7; }
 
 .ref-title {
     font-family: var(--font-serif);
@@ -704,12 +675,6 @@ a:hover {
 
 .ref-panel.active { display: block; }
 .ref-panel .media-badge { margin-right: 0.4rem; margin-bottom: 0.35rem; }
-
-@media (max-width: 768px) {
-    .ref-entry { grid-template-columns: 1fr; gap: 0.5rem; }
-    .ref-side { display: flex; align-items: center; gap: 0.75rem; }
-    .ref-year { margin-bottom: 0; }
-}
 
 /* ================================================
    Politics at Work page
