@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260923k">
 </head>
-<body class="editorial-body">
+<body class="home-body">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid nav-container">
             <a class="navbar-brand" href="index.html">Max Kagan</a>
@@ -30,89 +30,54 @@
         </div>
     </nav>
 
-    <main class="home-page editorial-home">
-        <div class="container-main">
-            <div class="editorial-layout">
-                <aside class="editorial-rail">
-                    <div class="rail-card">
-                        <div class="rail-photo">
-                            <img src="images/headshot_2026.jpg" alt="Max Kagan">
-                        </div>
-                        <h1 class="rail-name">Max Kagan</h1>
-                        <p class="rail-title">Postdoctoral Research Scholar in Management<br>Columbia Business School</p>
+    <main class="home-sections home-index">
+        <header class="home-mast mast-right">
+            <img src="images/headshot_480.jpg" alt="Max Kagan">
+            <h1 class="mast-name">Max Kagan</h1>
+        </header>
 
-                        <div class="rail-actions">
-                            <a class="btn btn-primary" href="research.html">Explore Research</a>
-                            <a class="btn btn-outline" href="cv.html">View CV</a>
-                        </div>
+        <section class="home-section">
+            <p class="home-label">About</p>
+            <p>Welcome! I am a Postdoctoral Research Scholar in Management at Columbia Business School.
+                In 2026, I was also named an Affiliate Fellow of the <a href="https://www.chicagobooth.edu/research/stigler/research/affiliate-fellows/current-cohort" target="_blank" rel="noopener">Stigler Center</a> at the University of Chicago's Booth School of Business.</p>
+        </section>
 
-                        <div class="rail-section">
-                            <p class="rail-section-title">Elsewhere</p>
-                            <a href="https://scholar.google.com/citations?user=D7XsKOkAAAAJ&hl=en" class="rail-link" target="_blank" rel="noopener" aria-label="Google Scholar">
-                                <i class="fas fa-graduation-cap"></i> Google Scholar
-                            </a>
-                            <a href="https://twitter.com/max_kagan" class="rail-link" target="_blank" rel="noopener" aria-label="X">
-                                <i class="fab fa-x-twitter"></i> X (Twitter)
-                            </a>
-                            <a href="https://bsky.app/profile/maxkagan.bsky.social" class="rail-link" target="_blank" rel="noopener" aria-label="Bluesky">
-                                <svg viewBox="0 0 568 501" fill="currentColor" class="bluesky-icon" aria-hidden="true"><path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.217C285.185 377.326 284.012 374.171 284 374.357C283.988 374.171 282.815 377.326 280.369 383.217C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"/></svg> Bluesky
-                            </a>
-                            <a href="https://www.linkedin.com/in/maxkagan/" class="rail-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i> LinkedIn
-                            </a>
-                            <a href="https://github.com/maxikagan" class="rail-link" target="_blank" rel="noopener" aria-label="GitHub">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </aside>
+        <section class="home-section">
+            <p class="home-label">My Research</p>
+            <p><strong>I study politics at work.</strong> Societies around the world are increasingly marked by political polarization.
+                My research seeks to understand how politics at work affects (a) firms' strategy and performance, (b) employees' careers, and (c) democracy and society as a whole.
+                Some of the topics I have studied include:</p>
+            <ul>
+                <li>What firms and industries have more Democrats versus Republicans, and how politically segregated are workers?</li>
+                <li>How do firms' organizational cultures affect workers' civic engagement and participation in democracy?</li>
+                <li>How do firms' political stances shape employee retention and turnover?</li>
+            </ul>
+            <p>My research has been published or is forthcoming in <em>Administrative Science Quarterly</em>, <em>Organization Science</em>, and <em>Nature Human Behaviour</em>, and is under review at <em>Management Science</em> (revise and resubmit).</p>
+        </section>
 
-                <section class="editorial-story">
-                    <!-- <p class="story-kicker">About me</p> -->
-                    <div class="story-body">
-                        <p>Politics increasingly sorts people into different neighborhoods, media, and social circles, and into different workplaces.
-                            I study workplace political segregation: how it arises, and what it means for workers, firms, and democracy.</p>
-                    </div>
-                    <div>
-                        <p>My research has been published or is forthcoming in <em>Administrative Science Quarterly</em>, <em>Organization Science</em>, and <em>Nature Human Behaviour</em>, and is under review at <em>Management Science</em> (revise and resubmit).
-                            My work has also been financially supported by the National Science Foundation.</p>
-                        <p>I am currently a Postdoctoral Research Scholar at Columbia Business School. I am also a (non-resident) Affiliate Fellow at the University of Chicago's <a href="https://www.chicagobooth.edu/research/stigler/about/jr-sr-fellows" target="_blank" rel="noopener">Stigler Center for the Study of the Economy and the State</a>.</p>
-                        <p>I hold a Ph.D. from the University of California, Berkeley. Before graduate school, I worked at McKinsey &amp; Company in Dubai and New York, in private equity, and at the <a href="https://goodjobsinstitute.org/" target="_blank" rel="noopener">Good Jobs Institute</a>.</p>
-                    </div>
-                    <div class="story-callout">
-                        <p class="callout-title">Politics at Work</p>
-                        <p>My research uses voter registration records linked to employment histories for tens of millions of U.S. workers, producing one of the first large-scale pictures of how partisanship operates inside firms.
-                            You can explore our publicly-available dataset and discover the partisan makeup of organizations, occupations, and industries.</p>
-                        <a href="politics-at-work.html" class="callout-link">Explore the data</a>
-                    </div>
+        <section class="home-section">
+            <p class="home-label">Background</p>
+            <p>I completed my Ph.D. at the University of California, Berkeley, where I was a National Science Foundation Graduate Research Fellow.
+                Before graduate school, I worked at McKinsey &amp; Company in Dubai and New York, as a private equity investor, and at the <a href="https://goodjobsinstitute.org/" target="_blank" rel="noopener">Good Jobs Institute</a>.</p>
+        </section>
 
-                
+        <section class="home-section">
+            <p class="home-label">The Politics at Work Initiative</p>
+            <p>I am one of the co-leads of the Politics at Work Initiative, which links voter registration records for tens of millions of workers to their employment histories.
+                The resulting data provide the broadest and deepest view yet of how and why political partisanship matters for firms, workers, and society.
+                You can explore our publicly-available data and discover the partisan makeup of organizations, occupations, and industries.</p>
+            <a class="home-cta" href="politics-at-work.html">Explore the data &rarr;</a>
+        </section>
 
-                    <!-- <div class="topic-tags">
-                        <span class="topic-tag">Non-market Strategy</span>
-                        <span class="topic-tag">Corporate Political Activity</span>
-                        <span class="topic-tag">Human Capital</span>
-                        <span class="topic-tag">Partisan Diversity</span>
-                        <span class="topic-tag">Political Mobilization</span>
-                    </div> -->
-
-                    <!-- <div class="feature-grid">
-                        <article class="feature-card">
-                            <p class="feature-label">Published</p>
-                            <h3 class="feature-title">Organization Science</h3>
-                            <p class="feature-text">Introducing VRscores, a new measure of workforce partisanship built from voter registrations covering 24 million workers.</p>
-                            <a href="research.html" class="feature-link">View research</a>
-                        </article>
-                        <article class="feature-card">
-                            <p class="feature-label">Forthcoming</p>
-                            <h3 class="feature-title">Nature Human Behavior</h3>
-                            <p class="feature-text">Americans are politically segregated by workplace, with partisan sorting similar in magnitude to gender segregation.</p>
-                            <a href="research.html" class="feature-link">View research</a>
-                        </article>
-                    </div> -->
-                </section>
+        <section class="home-section">
+            <div class="home-cta-row">
+                <a class="home-cta" href="mailto:mik2124@columbia.edu">Email</a>
+                <a class="home-cta" href="https://scholar.google.com/citations?user=D7XsKOkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                <a class="home-cta" href="https://twitter.com/max_kagan" target="_blank" rel="noopener">X</a>
+                <a class="home-cta" href="https://www.linkedin.com/in/maxkagan/" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="home-cta" href="https://github.com/maxikagan" target="_blank" rel="noopener">GitHub</a>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
@@ -123,7 +88,6 @@
                     <a href="mailto:mik2124@columbia.edu" title="Email"><i class="fas fa-envelope"></i></a>
                     <a href="https://scholar.google.com/citations?user=D7XsKOkAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                     <a href="https://twitter.com/max_kagan" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://bsky.app/profile/maxkagan.bsky.social" target="_blank" title="Bluesky"><svg viewBox="0 0 568 501" fill="currentColor" class="bluesky-icon"><path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.217C285.185 377.326 284.012 374.171 284 374.357C283.988 374.171 282.815 377.326 280.369 383.217C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"/></svg></a>
                     <a href="https://www.linkedin.com/in/maxkagan/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/maxikagan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 </div>
