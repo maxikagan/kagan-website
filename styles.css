@@ -1314,6 +1314,14 @@ body.home-body {
     line-height: 1.55;
 }
 
+.home-cta-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
 .mast-right {
     flex-direction: row-reverse;
     justify-content: space-between;
