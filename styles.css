@@ -1282,7 +1282,8 @@ body.home-body {
 }
 
 .home-section p,
-.home-section li {
+.home-section li,
+.home-intro-appointments {
     font-size: 1.06rem;
     line-height: 1.65;
 }
@@ -1325,7 +1326,8 @@ body.home-body {
 }
 
 .home-index .home-section p,
-.home-index .home-section li {
+.home-index .home-section li,
+.home-index .home-intro-appointments {
     line-height: 1.55;
 }
 
@@ -1369,10 +1371,9 @@ body.home-body {
 .home-intro-appointments {
     grid-area: appointments;
     align-self: start;
-    line-height: 1.35;
     list-style: disc;
     margin: 0;
-    padding-inline-start: 1.05rem;
+    padding-inline-start: 1.25rem;
 }
 
 .home-intro-appointments li + li {
