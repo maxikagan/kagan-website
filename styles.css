@@ -1345,6 +1345,38 @@ body.home-body {
     margin-bottom: 0;
 }
 
+.home-intro {
+    display: grid;
+    grid-template:
+        "identity portrait" auto
+        "bio      portrait" auto / minmax(0, 1fr) auto;
+    gap: 1.25rem 1.75rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+}
+
+.home-intro-identity {
+    grid-area: identity;
+    align-self: end;
+}
+
+.home-intro img {
+    grid-area: portrait;
+    width: 256px;
+    height: auto;
+}
+
+.home-intro-bio {
+    grid-area: bio;
+    align-self: start;
+    border-top: 0;
+    padding: 0;
+}
+
+.home-intro-bio p:last-child {
+    margin-bottom: 0;
+}
+
 .page-mast {
     margin-bottom: 2.25rem;
 }
@@ -1428,6 +1460,20 @@ h2.home-label {
     .home-mast {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .home-intro {
+        grid-template:
+            "identity" auto
+            "portrait" auto
+            "bio" auto / minmax(0, 1fr);
+        row-gap: 24px;
+    }
+
+    .home-intro img {
+        width: 192px;
+        max-width: 100%;
+        justify-self: center;
     }
 
     .mast-name {
