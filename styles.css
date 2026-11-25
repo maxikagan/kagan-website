@@ -1369,13 +1369,22 @@ body.home-body {
 .home-intro-appointments {
     grid-area: appointments;
     align-self: start;
-    list-style: none;
+    line-height: 1.35;
+    list-style: disc;
     margin: 0;
-    padding: 0;
+    padding-inline-start: 1.05rem;
 }
 
 .home-intro-appointments li + li {
     margin-top: 0.45rem;
+}
+
+.home-intro-appointments li::marker {
+    color: var(--navy-light);
+}
+
+.home-intro-appointments strong {
+    font-weight: 600;
 }
 
 .home-intro-appointments a {
