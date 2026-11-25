@@ -1376,11 +1376,20 @@ body.home-body {
 .home-appointment-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 0.75rem;
     list-style: none;
     margin: 0;
     padding: 0;
     font-size: 0.95rem;
+}
+
+.home-appointment-list > li {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 0.9rem 0.85rem;
+    background: #efede8;
+    border-radius: 0.2rem;
 }
 
 .home-appointment-list li > strong {
@@ -1397,7 +1406,8 @@ body.home-body {
 
 .home-appointment-date {
     display: block;
-    margin-top: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.55rem;
     color: var(--text-secondary);
     font-size: 0.82rem;
 }
@@ -1509,7 +1519,6 @@ h2.home-label {
 
     .home-appointment-list {
         grid-template-columns: 1fr;
-        gap: 1.1rem;
     }
 
     .mast-name {
