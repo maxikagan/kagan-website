@@ -1214,6 +1214,10 @@ body.home-body {
     padding: 3.5rem 1.5rem 4rem;
 }
 
+.home-index {
+    padding-top: 2.75rem;
+}
+
 .home-mast {
     display: flex;
     gap: 1.75rem;
@@ -1351,7 +1355,7 @@ body.home-body {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1.25rem 2.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
     margin-bottom: 0;
 }
 
@@ -1372,26 +1376,28 @@ body.home-body {
 .home-appointment-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.15rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
     font-size: 0.95rem;
 }
 
-.home-appointment-list strong {
+.home-appointment-list li > strong {
+    display: block;
+    margin-bottom: 0.25rem;
     font-weight: 600;
 }
 
 .home-appointment-detail {
     display: block;
     font-size: 0.88rem;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .home-appointment-date {
     display: block;
-    margin-top: 0.2rem;
+    margin-top: 0.4rem;
     color: var(--text-secondary);
     font-size: 0.82rem;
 }
@@ -1481,6 +1487,10 @@ h2.home-label {
 }
 
 @media (max-width: 640px) {
+    .home-index {
+        padding-top: 1.75rem;
+    }
+
     .home-mast {
         flex-direction: column;
         align-items: flex-start;
@@ -1499,7 +1509,7 @@ h2.home-label {
 
     .home-appointment-list {
         grid-template-columns: 1fr;
-        gap: 0.85rem;
+        gap: 1.1rem;
     }
 
     .mast-name {
